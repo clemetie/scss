@@ -1,0 +1,79 @@
+//연산자
+@use "sass:color";
+
+//변수
+$primary-color: rgb(251, 89, 116);
+$secondary-color: rgb(252, 151, 168);
+$text-color: #333;
+$padding: 10px;
+// 상속(Extend)
+%card-style {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+// 믹스인(mixin)
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+// 중첩
+.header {
+  background-color: rgb(207, 225, 231);
+  padding: 20px;
+  h1 {
+    color: rgb(254, 127, 148);
+  }
+  h2 {
+    color: brown;
+  }
+  .box {
+    width: 50px;
+    line-height: 50px;
+    background-color: pink;
+    text-align: center;
+    span {
+      font-size: 20px;
+    }
+  }
+}
+
+// 변수 사용하기 & 중첩
+.container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+  .card {
+    @extend %card-style;
+    @include flex-center();
+    background-color: lighten($secondary-color, 5%);
+    color: $text-color;
+    width: 40%;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .special {
+    background-color: rgb(207, 225, 231);
+  }
+}
+
+footer {
+  width: 100%;
+  background-color: color.scale($primary-color, $lightness: 10%);
+  color: #fff;
+  text-align: center;
+  padding: $padding * 2;
+}
