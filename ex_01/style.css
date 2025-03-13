@@ -1,0 +1,82 @@
+* {
+  margin: 2px;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  background-color: #c7d7f6;
+  font-size: 13px;
+}
+
+h3 {
+  font-size: 28px;
+  color: #ee4444;
+}
+
+.section .list {
+  display: flex;
+  list-style: none;
+}
+.section .list li {
+  padding: 4px 10px;
+  border-radius: 10px;
+  margin-left: 10px;
+  background-color: #fff;
+}
+.section .list li:last-child {
+  background-color: pink;
+}
+.section .list li:hover {
+  cursor: pointer;
+  background-color: lightblue;
+}
+
+.btn {
+  background-color: #fff;
+  margin: 0 10px;
+  padding: 3px 10px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+}
+.btn.active {
+  border: 2px solid #ccc;
+  background-color: #ccc;
+  cursor: pointer;
+}
+.btn:hover {
+  cursor: pointer;
+  border: 2px solid #ddd;
+  background-color: #ddd;
+}
+
+.fs-small {
+  color: #4581fa;
+}
+.fs-medium {
+  color: #2954ab;
+  font-size: 16px;
+}
+.fs-large {
+  color: #103d97;
+  font-size: 24px;
+}
+
+.product li {
+  width: 300px;
+  height: 50px;
+  background-color: #fff;
+  margin: 5px;
+}
+.box {
+  width: 300px;
+  height: 50px;
+  background-color: #fff;
+  margin: 5px;
+}
+
+.box {
+  background-color: #103d97;
+  margin-top: 100px;
+  margin-left: 30px;
+}/*# sourceMappingURL=style.css.map */

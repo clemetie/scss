@@ -1,0 +1,101 @@
+* {
+  margin: 2px;
+  padding: 0;
+  list-style: none;
+}
+$box: rgb(253, 102, 128);
+$ball: red;
+$yellow: yellow;
+//색상
+$red: #ee4444;
+$black: #222;
+$bg-color: #c7d7f6;
+$link-color: red;
+$p-color: #282a36;
+
+//폰트사이즈
+$font-p: 13px;
+$font-h1: 28px;
+$base-font: "Noto Sans KR", sans-serif;
+
+body {
+  background-color: $bg-color;
+  font-size: $font-p;
+}
+h3 {
+  font-size: $font-h1;
+  color: #ee4444;
+}
+.section {
+  .list {
+    display: flex;
+    list-style: none;
+    li {
+      padding: 4px 10px;
+      border-radius: 10px;
+      margin-left: 10px;
+      background-color: #fff;
+      &:last-child {
+        background-color: pink;
+      }
+      &:hover {
+        cursor: pointer;
+        background-color: lightblue;
+      }
+    }
+  }
+}
+
+.btn {
+  background-color: #fff;
+  margin: 0 10px;
+  padding: 3px 10px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  &.active {
+    border: 2px solid #ccc;
+    background-color: #ccc;
+    cursor: pointer;
+  }
+  &:hover {
+    cursor: pointer;
+    border: 2px solid #ddd;
+    background-color: #ddd;
+  }
+}
+.fs {
+  &-small {
+    color: #4581fa;
+  }
+  &-medium {
+    color: #2954ab;
+    font-size: 16px;
+  }
+  &-large {
+    color: #103d97;
+    font-size: 24px;
+  }
+}
+.product {
+  $w: 300px;
+  $h: 50px;
+  li {
+    width: $w;
+    height: $h;
+    background-color: #fff;
+    margin: 5px;
+  }
+  @at-root .box {
+    width: $w;
+    height: $h;
+    background-color: #fff;
+    margin: 5px;
+  }
+}
+.box {
+  background-color: #103d97;
+  margin: {
+    top: 100px;
+    left: 30px;
+  }
+}
