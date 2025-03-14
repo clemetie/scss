@@ -1,0 +1,74 @@
+$family: unquote("Noto+Sans");
+@import url("http://fonts.googleapis.com/css?family=#{$family}");
+$font-size: 10px 12px 16px; // 리스트
+$font-size2: (
+  "h1": 38px,
+  "p": 18px,
+  "span": 20px,
+); // 맵 형태
+// font-weight
+$font-weights: (
+  "regular": 400,
+  "medium": 700,
+  "bold": 900,
+);
+// 기본 너비와 높이 설정
+$w: 200px;
+$h: 200px;
+
+// 크기와 위치 리스트 설정
+$sizes: 40px, 50px, 80px;
+$valid-sides: top, bottom, left, right, center;
+
+// 전역 색상 변수 설정
+$mycolor: #7540e7;
+
+// 주요 색상 및 경로 변수 설정
+$color-primary: #e96900;
+$url-images: "./image/";
+$image-file: photo_01, photo_02, photo_03;
+//css 시작
+h1 {
+  color: pink;
+}
+.test1 {
+  font-size: nth($font-size, 2);
+  font-weight: map-get($font-weights, "medium");
+}
+.test2 {
+  font-size: nth($font-size, 3);
+  font-weight: map-get($font-weights, "bold");
+  text-align: nth($valid-sides, 5);
+}
+//이미지
+.test3 {
+  background: url("#{$url-images}#{nth($image-file, 1)}.jpg");
+  width: 200px;
+  height: 200px;
+}
+.test4 {
+  background: url("#{$url-images}#{nth($image-file , 2)}.jpg");
+  width: 200px;
+  height: 200px;
+}
+.test5 {
+  background: url("#{$url-images}#{nth($image-file , 3)}.jpg");
+  width: 200px;
+  height: 200px;
+}
+.box {
+  width: $w;
+  height: $h;
+  background: $color-primary url("#{$url-images}#{nth($image-file , 1)}.jpg");
+}
+.info {
+  $mycolor: pink;
+  $line-normal: 7;
+  font-size: 15px;
+  line-height: $line-normal;
+  text-align: nth($valid-sides, 5);
+  span {
+    color: $mycolor;
+    $line-normal: 2; // <= 재할당 가능(지역변수)
+  }
+}

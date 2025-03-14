@@ -1,0 +1,50 @@
+@import url("http://fonts.googleapis.com/css?family=Noto+Sans");
+h1 {
+  color: pink;
+}
+
+.test1 {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.test2 {
+  font-size: 16px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.test3 {
+  background: url("./image/photo_01.jpg");
+  width: 200px;
+  height: 200px;
+}
+
+.test4 {
+  background: url("./image/photo_02.jpg");
+  width: 200px;
+  height: 200px;
+}
+
+.test5 {
+  background: url("./image/photo_03.jpg");
+  width: 200px;
+  height: 200px;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background: #e96900 url("./image/photo_01.jpg");
+}
+
+.info {
+  font-size: 15px;
+  line-height: 7;
+  text-align: center;
+}
+.info span {
+  color: pink;
+}
+
+/*# sourceMappingURL=style.css.map */
